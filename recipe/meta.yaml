@@ -22,10 +22,11 @@ requirements:
   run:
     - python
     - python-ecmwf_grib
+    - iris>=2.0
 
 test:
   requires:
-    - iris
+    - iris>=2.0
     - iris-sample-data
     - pep8
   commands:
