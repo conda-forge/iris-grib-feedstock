@@ -1,4 +1,4 @@
-{% set version = "0.12.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: iris-grib
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/SciTools/iris-grib/archive/v{{ version }}.tar.gz
-  sha256: c2e92d25d8bfd2ddff22ae47c4532c884678bac6ea0d935367eced051ae08bb3
+  sha256: 602f8a2dea2f75d7656e16843210b5654102a260de528d42501b25994db7017d
 
 build:
   number: 0
@@ -17,22 +17,20 @@ requirements:
   build:
     - python
     - pip
-    - python-ecmwf_grib
   run:
     - python
+    - iris >=2
     - python-ecmwf_grib
 
 test:
-  requires:
-    - iris
-    - iris-sample-data
-    - pep8
+  imports:
+    - iris_grib
   commands:
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
-  home: http://scitools.org.uk/iris-grib
+  home: https://iris-grib.readthedocs.io
   license: LGPL-3.0
   license_family: LGPL
   license_file: COPYING.LESSER
@@ -43,3 +41,4 @@ extra:
     - ocefpaf
     - bjlittle
     - djkirkham
+    - pp-mo
