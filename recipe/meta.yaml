@@ -9,12 +9,12 @@ source:
   sha256: 051fb31336170692c6a4cb47334315ec7fba8be92316e208183ab157739c0855
 
 build:
-  number: 1000
+  number: 1001
   skip: True  # [win or py3k]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -25,16 +25,13 @@ requirements:
 test:
   imports:
     - iris_grib
-  commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://iris-grib.readthedocs.io
   license: LGPL-3.0
   license_family: LGPL
   license_file: COPYING.LESSER
-  summary: 'Iris GRIB interface.'
+  summary: 'Iris GRIB interface'
 
 extra:
   recipe-maintainers:
