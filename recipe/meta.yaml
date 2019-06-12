@@ -10,6 +10,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -35,3 +36,4 @@ about:
 extra:
   recipe-maintainers:
     - corinnebosley
+    - ocefpaf
