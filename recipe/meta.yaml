@@ -1,4 +1,4 @@
-{% set version = "0.14.1" %}
+{% set version = "0.15.0" %}
 
 package:
   name: iris-grib
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/SciTools/iris-grib/archive/v{{ version }}.tar.gz
-  sha256: a8c0241c1052bbfbf9064d51d23c7478ef48977e075fde0e2cd413666e4290eb
+  sha256: 9dfb92a308975eb9d377c3fd669370db14f7577179f246f0e217be63a2195578
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: True  # [win or py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -35,5 +35,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - bjlittle
     - corinnebosley
+    - lbdreyer      
     - ocefpaf
+    - pp-mo
