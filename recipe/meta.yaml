@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: iris-grib
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/SciTools/iris-grib/archive/v{{ version }}.tar.gz
-  sha256: 9dfb92a308975eb9d377c3fd669370db14f7577179f246f0e217be63a2195578
+  sha256: a1d469b200c612c73c4513f93ec725fe9edd1bc9bcb9272dcd651cc0908f299b
 
 build:
   number: 0
-  skip: True  # [win or py<36]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [win or py<36]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -31,12 +31,12 @@ about:
   license: LGPL-3.0
   license_family: LGPL
   license_file: COPYING.LESSER
-  summary: 'Iris GRIB interface'
+  summary: Iris GRIB interface
 
 extra:
   recipe-maintainers:
     - bjlittle
     - corinnebosley
-    - lbdreyer      
+    - lbdreyer
     - ocefpaf
     - pp-mo
