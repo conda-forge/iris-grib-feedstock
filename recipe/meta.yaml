@@ -18,7 +18,7 @@ requirements:
     - python
     - pip
   run:
-    - python >=3
+    - python
     - iris >=3.0.0rc0
     - python-eccodes
 
