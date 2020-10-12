@@ -1,4 +1,4 @@
-{% set version = "0.15.1" %}
+{% set version = "0.16.0rc0" %}
 
 package:
   name: iris-grib
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/SciTools/iris-grib/archive/v{{ version }}.tar.gz
-  sha256: a1d469b200c612c73c4513f93ec725fe9edd1bc9bcb9272dcd651cc0908f299b
+  sha256: fe9a4fcecbf4b9f6d24b224c4ca58c5065ac2640929104fbac17e4045391fd5f
 
 build:
   number: 0
@@ -18,8 +18,8 @@ requirements:
     - python
     - pip
   run:
-    - python
-    - iris >=2
+    - python>=3
+    - iris>=3.0.0rc0
     - python-eccodes
 
 test:
