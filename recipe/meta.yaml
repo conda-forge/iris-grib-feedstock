@@ -22,9 +22,9 @@ requirements:
     - iris >=3.0.0rc0
     - python-eccodes
 
-test:
-  imports:
-    - iris_grib
+#test:
+#  imports:
+#    - iris_grib
 
 about:
   home: https://iris-grib.readthedocs.io
