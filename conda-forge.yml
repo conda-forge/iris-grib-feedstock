@@ -4,8 +4,8 @@ conda_forge_output_validation: true
 
 channels:
   sources:
+    - conda-forge/label/rc_iris
     - conda-forge
     - defaults
-    - conda-forge/label/rc_iris
   targets:
     - ["conda-forge", "rc_iris_grib"]
