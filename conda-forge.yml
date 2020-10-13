@@ -1,3 +1,11 @@
 provider:
   win: azure
 conda_forge_output_validation: true
+
+channels:
+  sources:
+    - conda-forge
+    - defaults
+    - conda_forge/labels/rc_iris
+  targets:
+    - ["conda-forge", "rc_iris_grib"]
