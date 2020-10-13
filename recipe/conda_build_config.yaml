@@ -1,2 +1,4 @@
 channel_targets:
   - conda-forge rc_iris_grib
+numpy:
+  - 1.19

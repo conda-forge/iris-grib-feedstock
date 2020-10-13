@@ -9,3 +9,6 @@ channels:
     - conda-forge/label/rc_iris
   targets:
     - ["conda-forge", "rc_iris_grib"]
+
+numpy:
+  - 1.18
