@@ -6,6 +6,6 @@ channels:
   sources:
     - conda-forge
     - defaults
-    - conda_forge/labels/rc_iris
+    - conda-forge/label/rc_iris
   targets:
     - ["conda-forge", "rc_iris_grib"]

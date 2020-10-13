@@ -15,16 +15,17 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=0.15
     - pip
   run:
     - python
+    - numpy >=0.15
     - iris >=3.0.0rc0
     - python-eccodes
 
-#test:
-#  imports:
-#    - iris_grib
+test:
+  imports:
+    - iris_grib
 
 about:
   home: https://iris-grib.readthedocs.io
