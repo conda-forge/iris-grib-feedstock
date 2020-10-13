@@ -1,2 +1,5 @@
+channel_sources:
+    - conda-forge/label/rc_iris,conda-forge,defaults
+
 channel_targets:
   - conda-forge rc_iris_grib
