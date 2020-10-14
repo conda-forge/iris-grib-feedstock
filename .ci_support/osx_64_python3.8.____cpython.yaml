@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/rc_iris,conda-forge,defaults
 channel_targets:
 - conda-forge rc_iris_grib
 macos_machine:
