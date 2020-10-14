@@ -19,7 +19,6 @@ requirements:
     - pip
   run:
     - python
-    - numpy >=0.15
     - iris >=3.0.0rc0
     - python-eccodes
 
@@ -41,3 +40,4 @@ extra:
     - lbdreyer
     - ocefpaf
     - pp-mo
+    - trexfeathers
