@@ -21,6 +21,7 @@ requirements:
     - python
     - iris >=3
     - python-eccodes
+    - eccodes >=2.16
 
 test:
   imports:
