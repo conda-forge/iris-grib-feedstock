@@ -1,4 +1,4 @@
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 package:
   name: iris-grib
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/SciTools/iris-grib/archive/v{{ version }}.tar.gz
-  sha256: f652c3e62e0525f691e847f9ab9018ab3f2f1f0f2716d0bc917a1818bfcd43ba
+  sha256: 9fc00737e3eee770dfd2f969df55e6eeb13555980876946b753b4fa0874389cb
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win or py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
