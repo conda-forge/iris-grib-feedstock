@@ -27,10 +27,11 @@ requirements:
 test:
   imports:
     - iris_grib
-  commands:
-    - pip check
-  requires:
-    - pip
+  # cannot run pip check b/c python-eccodes is named eccodes-python on PyPI :-/
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: https://iris-grib.readthedocs.io
