@@ -1,7 +1,9 @@
+{% set name = "iris-grib" %}
 {% set version = "0.17.1" %}
 
+
 package:
-  name: iris-grib
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
@@ -10,15 +12,15 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py<37]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - iris >=3.0.2
     - python-eccodes
     - eccodes >=2.16
@@ -26,6 +28,11 @@ requirements:
 test:
   imports:
     - iris_grib
+  # cannot run pip check b/c python-eccodes is named eccodes-python on PyPI :-/
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: https://iris-grib.readthedocs.io
