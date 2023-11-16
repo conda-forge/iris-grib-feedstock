@@ -1,5 +1,5 @@
 {% set name = "iris-grib" %}
-{% set version = "0.18.0" %}
+{% set version = "0.19.0" %}
 
 
 package:
@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/SciTools/iris-grib/archive/v{{ version }}.tar.gz
-  sha256: e41b652caee899c92b2b7d0c9beeb074c4e82042df88c9d6d937278f5702f624
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a691b41abc25c18dd1b4f2ac16320482436e535ae9f6a57725031f5c7a9be238
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - iris >=3.0.2
-    - python-eccodes
-    - eccodes >=2.16
+    - python-eccodes >=1.6.1
+    - eccodes >=2.32.1
 
 test:
   imports:
@@ -35,11 +35,13 @@ test:
   #   - pip
 
 about:
-  home: https://iris-grib.readthedocs.io
-  license: LGPL-3.0-or-later
-  license_family: LGPL
-  license_file: COPYING.LESSER
+  home: https://github.com/SciTools/iris-grib
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
   summary: Iris GRIB interface
+  doc_url: https://iris-grib.readthedocs.io
+  dev_url: https://github.com/SciTools/iris-grib
 
 extra:
   recipe-maintainers:
