@@ -1,5 +1,5 @@
 {% set name = "iris-grib" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a691b41abc25c18dd1b4f2ac16320482436e535ae9f6a57725031f5c7a9be238
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 76da5d2932c84f7c62db00b25b2aba875d4fdc9a5e5658d26a90aebd72ed94d2
 
 build:
   number: 0
