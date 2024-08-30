@@ -1,4 +1,4 @@
-{% set name = "iris-grib" %}
+{% set name = "iris_grib" %}
 {% set version = "0.20.0" %}
 
 
