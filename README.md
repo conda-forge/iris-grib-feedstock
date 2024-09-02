@@ -148,7 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@bjlittle](https://github.com/bjlittle/)
-* [@corinnebosley](https://github.com/corinnebosley/)
 * [@lbdreyer](https://github.com/lbdreyer/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pp-mo](https://github.com/pp-mo/)
