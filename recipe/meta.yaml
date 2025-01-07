@@ -1,4 +1,4 @@
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 
 
 package:
@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/iris_grib/iris_grib-{{ version }}.tar.gz
-  sha256: 76da5d2932c84f7c62db00b25b2aba875d4fdc9a5e5658d26a90aebd72ed94d2
+  url: https://pypi.org/packages/source/i/iris_grib/iris_grib-{{ version }}.tar.gz
+  sha256: 3db8525848dbf3ea32052e68da2132ed21887bb119728e16ea2595cd05bc1035
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
