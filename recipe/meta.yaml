@@ -30,11 +30,8 @@ requirements:
 test:
   imports:
     - iris_grib
-  # cannot run pip check b/c python-eccodes is named eccodes-python on PyPI :-/
-  # commands:
-  #   - pip check
-  # requires:
-  #   - pip
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/SciTools/iris-grib
