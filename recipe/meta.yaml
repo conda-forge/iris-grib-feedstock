@@ -1,5 +1,5 @@
-{% set python_min = "3.10" %}
-{% set version = "0.21.0" %}
+{% set python_min = "3.12" %}
+{% set version = "0.22.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/iris_grib/iris_grib-{{ version }}.tar.gz
-  sha256: 3db8525848dbf3ea32052e68da2132ed21887bb119728e16ea2595cd05bc1035
+  sha256: e2bd30471c369d0a6adb08e66e92e2ba8c04fa5ac55779db8579b5b4390df616
 
 build:
   number: 0
@@ -19,11 +19,11 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=64
+    - setuptools >=77.0.3
     - setuptools-scm >=8
   run:
     - python >={{ python_min }}
-    - iris >=3.0.2
+    - iris >=3.10
     - python-eccodes >=1.6.1
     - eccodes >=2.33
 
