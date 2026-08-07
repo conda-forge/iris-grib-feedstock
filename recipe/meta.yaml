@@ -1,5 +1,5 @@
 {% set python_min = "3.12" %}
-{% set version = "0.22.0" %}
+{% set version = "0.23.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/iris_grib/iris_grib-{{ version }}.tar.gz
-  sha256: e2bd30471c369d0a6adb08e66e92e2ba8c04fa5ac55779db8579b5b4390df616
+  sha256: 15d804469e01261cfee3a8e046f979002d1015ada81d972f22d7b1e18272e3c2
 
 build:
   number: 0
